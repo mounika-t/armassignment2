@@ -11,7 +11,7 @@ __main  FUNCTION
 	VLDR.F32 s1,=1	;s1 holds intemediate value
 	VLDR.F32 s2,=1	;s2 stores sum of the series
 loop1	CMP r2,r1      ; compare R1 and R2
-	BNE LOOP       ; if count isless than no of terms go to LOOP	
+	BLE LOOP       ; if count isless than no of terms go to LOOP	
 	B stop
 LOOP   VMUL.F32 s1,s1,s0       ;s1=s1*s0
        VMOV.F32 s5,r2    ;moving the bit stream in r2 to s5(FPR)
